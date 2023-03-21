@@ -68,3 +68,4 @@ Magic Poof              https://assetstore.unity.com/packages/vfx/particles/cart
 Aurora Font             https://www.dafont.com/aurora-5.font?a=on&l[]=10&l[]=1&l[]=6                                          Font for personal use only 
 Animations              https://www.mixamo.com/                                                                               Mixamo is available free for anyone with an Adobe ID (https://helpx.adobe.com/ca/creative-cloud/faq/mixamo-faq.html)
 Player controller       https://assetstore.unity.com/packages/essentials/starter-assets-third-person-character-controller-196526    Non standard EULA
+Scarecrow               https://robin-jordens.itch.io/cardboard-cutouts-asset-pack                                            "whatever your purpose [for this] may be"
