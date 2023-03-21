@@ -27,7 +27,17 @@ public class forestGenerator : MonoBehaviour
             position.z = ProceduralToolkit.RandomE.PointInRect(spawnRect).y;
             position.y = GetGroundPosition(new Vector3(position.x, 100f, position.z));
 
-            Instantiate(assetToInstanciate[indexToInstantiate], position, assetToInstanciate[indexToInstantiate].transform.rotation, parent.transform);
+            if (position.y == -1f)
+            {
+                position.x = ProceduralToolkit.RandomE.PointInRect(spawnRect).x;
+                position.z = ProceduralToolkit.RandomE.PointInRect(spawnRect).y;
+                position.y = GetGroundPosition(new Vector3(position.x, 100f, position.z));
+            }
+            else
+            {
+                Instantiate(assetToInstanciate[indexToInstantiate], position, assetToInstanciate[indexToInstantiate].transform.rotation, parent.transform);
+
+            }
         }
     }
 
@@ -38,7 +48,10 @@ public class forestGenerator : MonoBehaviour
         bool raycastHit = Physics.Raycast(position, Vector3.down, out hit);
         if (raycastHit)
         {
-            return hit.point.y;
+            if (hit.collider.tag == "Ground")
+                return hit.point.y;
+            else
+                return -1f;
         }
         return -1f;
     }
