@@ -10,6 +10,7 @@ public class ThridPersonShooterController : MonoBehaviour
     [SerializeField] private LayerMask aimColliderLayerMask = new LayerMask();
     [SerializeField] private Transform projectile;
     [SerializeField] private Transform spawnProjectilePosition;
+    public Animator animator;
 
     private StarterAssetsInputs starterAssetsInputs;
     private ThirdPersonController thirdPersonController;
@@ -50,6 +51,7 @@ public class ThridPersonShooterController : MonoBehaviour
 
         if(starterAssetsInputs.shoot)
         {
+            animator.SetTrigger("Attack");
             Vector3 aimDir = (mouseWorldPosition - spawnProjectilePosition.position).normalized;
             Instantiate(projectile, spawnProjectilePosition.position, Quaternion.LookRotation(aimDir, Vector3.up));
             starterAssetsInputs.shoot = false;
