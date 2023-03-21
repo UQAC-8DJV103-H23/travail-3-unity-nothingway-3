@@ -8,6 +8,8 @@ public class ThridPersonShooterController : MonoBehaviour
 {
     [SerializeField] private CinemachineVirtualCamera aimVirtualCamera;
     [SerializeField] private LayerMask aimColliderLayerMask = new LayerMask();
+    [SerializeField] private Transform projectile;
+    [SerializeField] private Transform spawnProjectilePosition;
 
     private StarterAssetsInputs starterAssetsInputs;
     private ThirdPersonController thirdPersonController;
@@ -46,6 +48,12 @@ public class ThridPersonShooterController : MonoBehaviour
             thirdPersonController.SetRotateOnMove(true);
         }
 
+        if(starterAssetsInputs.shoot)
+        {
+            Vector3 aimDir = (mouseWorldPosition - spawnProjectilePosition.position).normalized;
+            Instantiate(projectile, spawnProjectilePosition.position, Quaternion.LookRotation(aimDir, Vector3.up));
+            starterAssetsInputs.shoot = false;
+        }
 
 
 
