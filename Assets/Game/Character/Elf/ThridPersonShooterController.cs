@@ -10,6 +10,7 @@ public class ThridPersonShooterController : MonoBehaviour
     [SerializeField] private LayerMask aimColliderLayerMask = new LayerMask();
     [SerializeField] private Transform projectile;
     [SerializeField] private Transform spawnProjectilePosition;
+    [SerializeField] private Canvas TutorialCanvas;
     public Animator animator;
 
     private StarterAssetsInputs starterAssetsInputs;
@@ -18,6 +19,8 @@ public class ThridPersonShooterController : MonoBehaviour
     {
         starterAssetsInputs = GetComponent<StarterAssetsInputs>();
         thirdPersonController= GetComponent<ThirdPersonController>();
+
+        StartCoroutine(StartCountdown());
     }
 
     private void Update()
@@ -59,5 +62,11 @@ public class ThridPersonShooterController : MonoBehaviour
 
 
 
+    }
+
+    public IEnumerator StartCountdown(float countdownValue = 10)
+    {
+        yield return new WaitForSeconds(10.0f);
+        TutorialCanvas.gameObject.SetActive(false);
     }
 }
