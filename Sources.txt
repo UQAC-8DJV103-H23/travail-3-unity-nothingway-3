@@ -1,1 +1,70 @@
-Sources
+Asset Name               Links                                                                                                License
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Trees_Green             https://assetstore.unity.com/packages/3d/characters/lowpoly-simple-house-117348                       Standard Unity Asset Store EULA
+Tree1                   https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+Tree2                   https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+Tree3                   https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+Prop_Mushroom           https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+Mushroom1               https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+Mushroom2               https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+Mushroom3               https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+MushroomLarge           https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+Log                     https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+Flower1                 https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+Flower2                 https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+Flower3                 https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+Flower4                 https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+Grass1                  https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+Grass2                  https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+Grass3                  https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+Grass4                  https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+Ivy1                    https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+Ivy2                    https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+LightingPlant1          https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+LightingPlant2          https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+PlantEx1                https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+PlantEx2                https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+PlantEx3                https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+PlantEx4                https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+Rock1                   https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+Rock2                   https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+Rock3                   https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+Rock4                   https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+Rock5                   https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+Rock6                   https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+Rock7                   https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+Rock8                   https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+Rock9                   https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+Rock10                  https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+Rock11                  https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+Rock12                  https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+TreeDead1               https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+TreeDead2               https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+FallenBranch            https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+Prop_House              https://assetstore.unity.com/packages/3d/characters/lowpoly-simple-house-117348                       Standard Unity Asset Store EULA
+Prop_Crate              https://assetstore.unity.com/packages/3d/characters/lowpoly-simple-house-117348                       Standard Unity Asset Store EULA
+Prop_Axe                https://assetstore.unity.com/packages/3d/characters/lowpoly-simple-house-117348                       Standard Unity Asset Store EULA
+Prop_TreeTrunk_Cutoff   https://assetstore.unity.com/packages/3d/characters/lowpoly-simple-house-117348                       Standard Unity Asset Store EULA
+Prop_Fence              https://assetstore.unity.com/packages/3d/characters/lowpoly-simple-house-117348                       Standard Unity Asset Store EULA
+Prop_Wood1              https://assetstore.unity.com/packages/3d/characters/lowpoly-simple-house-117348                       Standard Unity Asset Store EULA
+Prop_Wood2              https://assetstore.unity.com/packages/3d/characters/lowpoly-simple-house-117348                       Standard Unity Asset Store EULA 
+Prop_WoodenWheelBarrow  https://assetstore.unity.com/packages/3d/characters/lowpoly-simple-house-117348                       Standard Unity Asset Store EULA
+Prop_Mushroom           https://assetstore.unity.com/packages/3d/characters/lowpoly-simple-house-117348                       Standard Unity Asset Store EULA
+Prop_Barrel             https://assetstore.unity.com/packages/3d/characters/lowpoly-simple-house-117348                       Standard Unity Asset Store EULA
+Prop_Stone1             https://assetstore.unity.com/packages/3d/characters/lowpoly-simple-house-117348                       Standard Unity Asset Store EULA
+Prop_Stone2             https://assetstore.unity.com/packages/3d/characters/lowpoly-simple-house-117348                       Standard Unity Asset Store EULA
+Prop_Stone3             https://assetstore.unity.com/packages/3d/characters/lowpoly-simple-house-117348                       Standard Unity Asset Store EULA
+Tent                    https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+CampFire                https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552   Standard Unity Asset Store EULA
+Tree_4                  https://assetstore.unity.com/packages/3d/vegetation/trees/free-low-poly-boxy-stylized-trees-0-67258   Standard Unity Asset Store EULA
+ForestTower_Blue				https://assetstore.unity.com/packages/3d/environments/forest-low-poly-toon-battle-arena-tower-defense-pack-100080 Standard Unity Asset Store EULA
+ForestCastle_Blue       https://assetstore.unity.com/packages/3d/environments/forest-low-poly-toon-battle-arena-tower-defense-pack-100080	Standard Unity Asset Store EULA
+ForestCastle_Red        https://assetstore.unity.com/packages/3d/environments/forest-low-poly-toon-battle-arena-tower-defense-pack-100080	Standard Unity Asset Store EULA
+ForestTower_Red         https://assetstore.unity.com/packages/3d/environments/forest-low-poly-toon-battle-arena-tower-defense-pack-100080	Standard Unity Asset Store EULA
+elf demo								https://assetstore.unity.com/packages/3d/characters/toon-elf-character-low-poly-19572								  Standard Unity Asset Store EULA
+LowPolyWater_Pack       https://assetstore.unity.com/packages/tools/particles-effects/lowpoly-water-107563                    Standard Unity Asset Store EULA
+Crosshair               https://iconduck.com/icons/14824/crosshair                                                            GNU General Public License v3.0
+Magic Poof              https://assetstore.unity.com/packages/vfx/particles/cartoon-fx-remaster-free-109565                   Standard Unity Asset Store EULA
+Aurora Font             https://www.dafont.com/aurora-5.font?a=on&l[]=10&l[]=1&l[]=6                                          Font for personal use only 
+Animations              https://www.mixamo.com/                                                                               Mixamo is available free for anyone with an Adobe ID (https://helpx.adobe.com/ca/creative-cloud/faq/mixamo-faq.html)
+Player controller       https://assetstore.unity.com/packages/essentials/starter-assets-third-person-character-controller-196526    Non standard EULA
