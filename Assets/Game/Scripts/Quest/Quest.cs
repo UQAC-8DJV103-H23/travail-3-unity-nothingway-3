@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting.FullSerializer;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
@@ -34,7 +35,7 @@ public class Quest : ScriptableObject
 
         protected string Description;
         public int CurrentAmount { get; protected set; }
-        public int RequiredAmount = 1;
+        public int RequiredAmount;
         public bool Completed { get; protected set; }
         [HideInInspector] public UnityEvent GoalCompleted;
 
@@ -47,6 +48,7 @@ public class Quest : ScriptableObject
         {
             Completed= false;
             GoalCompleted = new UnityEvent();
+            CurrentAmount=0;
         }
 
         protected void Evaluate()
@@ -62,6 +64,8 @@ public class Quest : ScriptableObject
             Completed= true;
             GoalCompleted.Invoke();
             GoalCompleted.RemoveAllListeners();
+
+            Debug.Log("Goal complete");
         }
 
         public void skip()
@@ -93,6 +97,7 @@ public class Quest : ScriptableObject
             //Give reward
             QuestCompleted.Invoke(this);
             QuestCompleted.RemoveAllListeners();
+            Debug.Log("Quest complete");
         }
     }
 

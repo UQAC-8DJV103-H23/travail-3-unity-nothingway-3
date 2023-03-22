@@ -16,3 +16,23 @@ public class ExampleGameEvent : GameEvent
         Example = name;
     }
 }
+
+public class FetchGameEvent : GameEvent
+{
+    public string FetchedItem;
+
+    public FetchGameEvent(string name)
+    {
+        FetchedItem = name;
+    }
+}
+
+public class KillGameEvent : GameEvent
+{
+    public string KilledEnemie;
+
+    public KillGameEvent(string name)
+    {
+        KilledEnemie = name;
+    }
+}
