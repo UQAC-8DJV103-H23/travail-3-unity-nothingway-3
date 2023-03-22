@@ -49,15 +49,36 @@ public class QuestWindow : MonoBehaviour
             loopTimes++;
         }
 
-        xpText.text = quest.reward.XP.ToString();
-        goldText.text = quest.reward.Currency.ToString();
+        xpText.text = quest.reward.XP.ToString() + " XP";
+        goldText.text = quest.reward.Currency.ToString() + " Gold";
+
+        StartCoroutine(StartCountdown());
     }
 
     public void UpdateIndicators(Quest quest)
     {
-        int indicatorIndex = 0;
+        //TODO : ASK ABOUT DESYNC UNPDATE
 
-        foreach(var goal in quest.Goals)
+        int indicatorIndex = 0;
+        foreach (var goal in quest.Goals)
+        {
+            goalsIndicators[indicatorIndex].transform.Find("Count").gameObject.GetComponent<Text>().text = goal.CurrentAmount + "/" + goal.RequiredAmount;
+            indicatorIndex++;
+        }
+        //StartCoroutine(StartCountdownUpdate(quest));
+    }
+
+    public IEnumerator StartCountdown(float countdownValue = 10f)
+    {
+        yield return new WaitForSeconds(countdownValue);
+        gameObject.SetActive(false);
+    }
+
+    public IEnumerator StartCountdownUpdate(Quest quest)
+    {
+        yield return new WaitForSeconds(1f);
+        int indicatorIndex = 0;
+        foreach (var goal in quest.Goals)
         {
             goalsIndicators[indicatorIndex].transform.Find("Count").gameObject.GetComponent<Text>().text = goal.CurrentAmount + "/" + goal.RequiredAmount;
             indicatorIndex++;

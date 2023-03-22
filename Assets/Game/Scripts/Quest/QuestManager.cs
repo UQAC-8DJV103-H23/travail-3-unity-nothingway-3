@@ -50,6 +50,6 @@ public class QuestManager : MonoBehaviour
     {
         EventManager.Instance.QueueEvent(new FetchGameEvent(fetchedItem));
         print("Fetched!");
-        //TODO : CALL UI MODIFICATION
+        questHolder.GetComponent<QuestWindow>().UpdateIndicators(CurrentQuests[currentActiveQuest]);
     }
 }
