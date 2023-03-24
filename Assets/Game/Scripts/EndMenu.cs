@@ -8,7 +8,6 @@ public class EndMenu : MonoBehaviour
     public void RestartGame()
     {
         SceneManager.LoadScene(1);
-        print("Clicked");
     }
 
     public void QuitGame()
