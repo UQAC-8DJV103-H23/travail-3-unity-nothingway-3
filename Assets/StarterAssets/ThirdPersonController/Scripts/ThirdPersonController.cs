@@ -93,7 +93,7 @@ namespace StarterAssets
 
         // animation IDs
         private int _animIDSpeed;
-        private int _animIDGrounded;
+       
         private int _animIDJump;
         private int _animIDFreeFall;
         private int _animIDMotionSpeed;
@@ -176,8 +176,6 @@ namespace StarterAssets
                 transform.position.z);
             Grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers,
                 QueryTriggerInteraction.Ignore);
-                //Update Animator
-                _animator.SetBool(_animIDGrounded, Grounded);
         }
 
         private void CameraRotation()
