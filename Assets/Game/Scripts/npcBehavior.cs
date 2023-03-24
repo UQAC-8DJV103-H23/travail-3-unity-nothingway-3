@@ -8,12 +8,9 @@ public class npcBehavior : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //TODO : ADD SPEECH THINGGIES
 
         if(other.CompareTag("Player"))
         {
-            questManager.Fetched("Panda");
-
             gameObject.GetComponent<DialogueTrigger>().TriggerDialogue();
         }
 
