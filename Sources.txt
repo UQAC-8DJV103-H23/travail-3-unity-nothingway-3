@@ -68,3 +68,12 @@ Magic Poof              https://assetstore.unity.com/packages/vfx/particles/cart
 Aurora Font             https://www.dafont.com/aurora-5.font?a=on&l[]=10&l[]=1&l[]=6                                          Font for personal use only 
 Animations              https://www.mixamo.com/                                                                               Mixamo is available free for anyone with an Adobe ID (https://helpx.adobe.com/ca/creative-cloud/faq/mixamo-faq.html)
 Player controller       https://assetstore.unity.com/packages/essentials/starter-assets-third-person-character-controller-196526    Non standard EULA
+Scarecrow               https://robin-jordens.itch.io/cardboard-cutouts-asset-pack                                            "whatever your purpose [for this] may be"
+PetNPC                  https://assetstore.unity.com/packages/3d/characters/toon-elf-character-low-poly-19572								  Standard Unity Asset Store EULA
+WASD image              https://www.flaticon.com/free-icon/wasd_4292669                                                       Free for personal and commercial use with attribution
+Mouse buttons icons     https://www.flaticon.com/free-icon/mouse-left-button_32041                                            Free for personal and commercial use with attribution
+Fairy Magic Sparkle Sound https://mixkit.co/free-sound-effects/magic/                                                      Mixkit Sound Effects Free License 
+Rising Funny Game Effect Sound    https://pixabay.com/sound-effects/rising-funny-game-effect-132474/                       Simplified Pixabay License
+Notification for game scenes      https://pixabay.com/sound-effects/notification-for-game-scenes-132473/                   Simplified Pixabay License
+Cardboard box open close          https://pixabay.com/sound-effects/cardboard-box-open-close-86303/                        Simplified Pixabay License
+Best Adventure Ever Music         https://pixabay.com/music/fantasy-dreamy-childrens-best-adventure-ever-122726/           Simplified Pixabay License
