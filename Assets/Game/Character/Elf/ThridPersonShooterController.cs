@@ -11,6 +11,8 @@ public class ThridPersonShooterController : MonoBehaviour
     [SerializeField] private Transform projectile;
     [SerializeField] private Transform spawnProjectilePosition;
     [SerializeField] private Canvas TutorialCanvas;
+    [SerializeField] private Canvas QuestCanvas;
+    [SerializeField] private Transform QuestAccepted;
     public Animator animator;
 
     private StarterAssetsInputs starterAssetsInputs;
@@ -21,6 +23,9 @@ public class ThridPersonShooterController : MonoBehaviour
         thirdPersonController= GetComponent<ThirdPersonController>();
 
         StartCoroutine(StartCountdown());
+        StartCoroutine(StartCountdownQuest());
+
+
     }
 
     private void Update()
@@ -68,5 +73,14 @@ public class ThridPersonShooterController : MonoBehaviour
     {
         yield return new WaitForSeconds(10.0f);
         TutorialCanvas.gameObject.SetActive(false);
+        QuestCanvas.gameObject.SetActive(true);
+        QuestAccepted.gameObject.SetActive(false);
+    }
+
+    public IEnumerator StartCountdownQuest(float countdownValue = 10)
+    {
+        yield return new WaitForSeconds(0.01f);
+        QuestCanvas.gameObject.SetActive(false);
+
     }
 }

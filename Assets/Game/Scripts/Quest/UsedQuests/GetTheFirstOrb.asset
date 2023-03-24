@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7161812681875312099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c23670b2ecab82d48a2e4043ce277cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RequiredAmount: 1
+  GoalCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  FetchedItem: MagicalOrb
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b32a2b3f239489439198bcacf16c163, type: 3}
+  m_Name: GetTheFirstOrb
+  m_EditorClassIdentifier: 
+  Information:
+    name: Healing Process
+    icon: {fileID: 0}
+    description: Evil scarecrows are holding on and protecting a magical orb you
+      need to heal the Tree of Life! Go to one of the fortresses and take it from
+      them!
+  reward:
+    Currency: 10
+    XP: 100
+  Goals:
+  - {fileID: 59936622510806166}
+  - {fileID: -7161812681875312099}
+  - {fileID: 7833861332044444271}
+--- !u!114 &59936622510806166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef8f155821ad1174aaab7c142d378e06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RequiredAmount: 5
+  GoalCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  KilledEnemie: Scarecrow
+--- !u!114 &7833861332044444271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f58845e414913dc4fb890cf174a03986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RequiredAmount: 1
+  GoalCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  BroughtItem: MagicalOrb
+  Location: Tree

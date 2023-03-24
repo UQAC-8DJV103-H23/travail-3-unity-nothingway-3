@@ -52,4 +52,17 @@ public class QuestManager : MonoBehaviour
         print("Fetched!");
         questHolder.GetComponent<QuestWindow>().UpdateIndicators(CurrentQuests[currentActiveQuest]);
     }
+    public void Talked(string personTalkedTo)
+    {
+        EventManager.Instance.QueueEvent(new TalkGameEvent(personTalkedTo));
+        print("Talked!");
+        questHolder.GetComponent<QuestWindow>().UpdateIndicators(CurrentQuests[currentActiveQuest]);
+    }
+
+    public void Brought(string itemBrought, string location)
+    {
+        EventManager.Instance.QueueEvent(new BringGameEvent(itemBrought, location));
+        print("Brought!");
+        questHolder.GetComponent<QuestWindow>().UpdateIndicators(CurrentQuests[currentActiveQuest]);
+    }
 }

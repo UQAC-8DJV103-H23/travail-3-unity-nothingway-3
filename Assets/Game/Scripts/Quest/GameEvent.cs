@@ -36,3 +36,26 @@ public class KillGameEvent : GameEvent
         KilledEnemie = name;
     }
 }
+
+public class TalkGameEvent : GameEvent
+{
+    public string TalkedTo;
+
+    public TalkGameEvent(string name)
+    {
+        TalkedTo = name;
+    }
+}
+
+public class BringGameEvent : GameEvent
+{
+    public string BroughtItem;
+    public string Location;
+
+
+    public BringGameEvent(string item, string location)
+    {
+        BroughtItem = item;
+        Location = location;
+    }
+}
