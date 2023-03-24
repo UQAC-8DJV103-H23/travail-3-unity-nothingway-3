@@ -72,3 +72,8 @@ Scarecrow               https://robin-jordens.itch.io/cardboard-cutouts-asset-pa
 PetNPC                  https://assetstore.unity.com/packages/3d/characters/toon-elf-character-low-poly-19572								  Standard Unity Asset Store EULA
 WASD image              https://www.flaticon.com/free-icon/wasd_4292669                                                       Free for personal and commercial use with attribution
 Mouse buttons icons     https://www.flaticon.com/free-icon/mouse-left-button_32041                                            Free for personal and commercial use with attribution
+Fairy Magic Sparkle Sound https://mixkit.co/free-sound-effects/magic/                                                      Mixkit Sound Effects Free License 
+Rising Funny Game Effect Sound    https://pixabay.com/sound-effects/rising-funny-game-effect-132474/                       Simplified Pixabay License
+Notification for game scenes      https://pixabay.com/sound-effects/notification-for-game-scenes-132473/                   Simplified Pixabay License
+Cardboard box open close          https://pixabay.com/sound-effects/cardboard-box-open-close-86303/                        Simplified Pixabay License
+Best Adventure Ever Music         https://pixabay.com/music/fantasy-dreamy-childrens-best-adventure-ever-122726/           Simplified Pixabay License
