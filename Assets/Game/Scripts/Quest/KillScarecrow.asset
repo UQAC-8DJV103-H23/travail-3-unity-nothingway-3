@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b32a2b3f239489439198bcacf16c163, type: 3}
+  m_Name: KillScarecrow
+  m_EditorClassIdentifier: 
+  Information:
+    name: Monster Slayer
+    icon: {fileID: 21300000, guid: 7ab74e659e1f0a34d9cfec21c478fc12, type: 3}
+    description: Slay the scary scarecrows around the village
+  reward:
+    Currency: 10
+    XP: 100
+  Goals:
+  - {fileID: 1970966149652533704}
+  - {fileID: 7113028539716474484}
+--- !u!114 &1970966149652533704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef8f155821ad1174aaab7c142d378e06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RequiredAmount: 3
+  GoalCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  KilledEnemie: Scarecrow
+--- !u!114 &7113028539716474484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c23670b2ecab82d48a2e4043ce277cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RequiredAmount: 1
+  GoalCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  FetchedItem: Panda
