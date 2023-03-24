@@ -18,7 +18,6 @@ Shader "ToonShader"
         _RimColor("Rim Color", Color) = (1,1,1,1)
         _RimAmount("Rim Amount", Range(0, 1)) = 0.716
         _RimThreshold("Rim Threshold", Range(0, 1)) = 0.1
-
     }
     SubShader
     {
@@ -33,6 +32,9 @@ Shader "ToonShader"
             #pragma vertex vert
             #pragma fragment frag
             #pragma multi_compile_fwdbase
+            #pragma multi_compile _ _MAIN_LIGHT_SHADOWS
+            #pragma multi_compile _ _MAIN_LIGHT_SHADOWS_CASCADE
+            #pragma multi_compile _ _SHADOWS_SOFT
 
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
             #include "Packages/com.unity.render-pipelines.core/ShaderLibrary/CommonMaterial.hlsl"
@@ -52,7 +54,6 @@ Shader "ToonShader"
                 float2 uv : TEXCOORD0;
                 float3 worldNormal : NORMAL;
                 float3 viewDir : TEXCOORD1;
-                float4 shadowCoord : TEXCOORD2;
             };
 
             TEXTURE2D(_MainTex);
@@ -75,8 +76,6 @@ Shader "ToonShader"
                 o.uv = TRANSFORM_TEX(v.uv, _MainTex);
                 o.worldNormal =  mul( v.normal, (float3x3)unity_ObjectToWorld);
                 o.viewDir = GetWorldSpaceViewDir(v.vertex);
-                o.shadowCoord = TransformWorldToShadowCoord(o.pos);
-                
                 return o;
             }
             
@@ -85,12 +84,14 @@ Shader "ToonShader"
             float4 frag (Varyings i) : SV_Target
             {
                 float3 normal = normalize(i.worldNormal);
-
+    
                 float NdotL = dot(_MainLightPosition, normal);
-                Light mainLight = GetMainLight();
+                float4 shadowCoord = TransformWorldToShadowCoord(i.pos);
+                Light mainLight = GetMainLight(shadowCoord);
                 float shadow = mainLight.shadowAttenuation;
-                float lightIntensity = smoothstep(0, 0.01, NdotL * shadow);
-                float4 light = lightIntensity * _MainLightColor;
+                float lightIntensity = 1 - smoothstep(1, 0, NdotL * shadow);
+                float4 light = shadow * _MainLightColor;
+
 
                 float3 viewDir = normalize(i.viewDir);
                 float3 halfVector = normalize(_MainLightPosition + viewDir);
@@ -112,30 +113,31 @@ Shader "ToonShader"
             ENDHLSL
         }
         
-       Pass {
-	Name "ShadowCaster"
-	Tags { "LightMode"="ShadowCaster" }
+        Pass {
+            Name "ShadowCaster"
+            Tags { "LightMode"="ShadowCaster" }
 
-	ZWrite On
-	ZTest LEqual
+            ZWrite On
+            ZTest LEqual
 
-	HLSLPROGRAM
-	#pragma vertex ShadowPassVertex
-	#pragma fragment ShadowPassFragment
+            HLSLPROGRAM
+            #pragma vertex ShadowPassVertex
+            #pragma fragment ShadowPassFragment
 
-	// Material Keywords
-	#pragma shader_feature _ALPHATEST_ON
-	#pragma shader_feature _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+            // Material Keywords
+            #pragma shader_feature _ALPHATEST_ON
+            #pragma shader_feature _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
 
-	// GPU Instancing
-	#pragma multi_compile_instancing
-	// (Note, this doesn't support instancing for properties though. Same as URP/Lit)
-	// #pragma multi_compile _ DOTS_INSTANCING_ON
-	// (This was handled by LitInput.hlsl. I don't use DOTS so haven't bothered to support it)
+            // GPU Instancing
+            #pragma multi_compile_instancing
+            // (Note, this doesn't support instancing for properties though. Same as URP/Lit)
+            // #pragma multi_compile _ DOTS_INSTANCING_ON
+            // (This was handled by LitInput.hlsl. I don't use DOTS so haven't bothered to support it)
 
-    #include "Packages/com.unity.render-pipelines.universal/Shaders/SimpleLitInput.hlsl"
-	#include "Packages/com.unity.render-pipelines.universal/Shaders/ShadowCasterPass.hlsl"
-	ENDHLSL
-}
+            #include "Packages/com.unity.render-pipelines.universal/Shaders/SimpleLitInput.hlsl"
+            #include "Packages/com.unity.render-pipelines.universal/Shaders/ShadowCasterPass.hlsl"
+            ENDHLSL
+        }
     }
+    
 }
