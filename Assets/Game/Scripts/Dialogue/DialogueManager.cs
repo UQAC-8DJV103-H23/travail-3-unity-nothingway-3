@@ -10,6 +10,12 @@ public class DialogueManager : MonoBehaviour
     public GameObject dialogueCanvas;
 
     private Queue<string> Sentences;
+    private QuestManager questManager;
+
+    private void Awake()
+    {
+        questManager = GameObject.FindGameObjectsWithTag("QuestManager")[0].GetComponent<QuestManager>();
+    }
 
     void Start()
     {
@@ -48,7 +54,9 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
-        //TODO : Complete quest of speaking here
+        if(nameText.text == "Pand-Ah")
+            questManager.Talked("Panda");
+        
         Cursor.lockState = CursorLockMode.Locked;
         dialogueCanvas.SetActive(false);
     }

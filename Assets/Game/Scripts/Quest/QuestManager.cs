@@ -13,10 +13,10 @@ public class QuestManager : MonoBehaviour
 
     private void Awake()
     {
-        foreach (var quest in CurrentQuests) 
+        if (CurrentQuests[0] != null) 
         {
-            quest.Initialize();
-            quest.QuestCompleted.AddListener(OnQuestCompleted);
+            CurrentQuests[0].Initialize();
+            CurrentQuests[0].QuestCompleted.AddListener(OnQuestCompleted);
 
             
             questHolder.SetActive(true);
@@ -25,8 +25,6 @@ public class QuestManager : MonoBehaviour
         currentActiveQuest = 0;
 
         questHolder.GetComponent<QuestWindow>().Initialize(CurrentQuests[currentActiveQuest]);
-
-        print("Current quest : " + CurrentQuests[currentActiveQuest].name);
     }
 
     private void OnQuestCompleted(Quest quest)
@@ -34,35 +32,50 @@ public class QuestManager : MonoBehaviour
         print("quest completed");
         currentActiveQuest++;
         questHolder.GetComponent<QuestWindow>().closeWindow();
-        questHolder.GetComponent<QuestWindow>().Initialize(CurrentQuests[currentActiveQuest]);
 
-        print("Current quest : " + CurrentQuests[currentActiveQuest].name);
+        if (CurrentQuests.Count == currentActiveQuest)
+        {
+            print("All quests are done");
+            //TODO : Add end-game
+            return;
+        }
+        print(CurrentQuests.Count);
+        print(currentActiveQuest);
+
+        CurrentQuests[currentActiveQuest].Initialize();
+        CurrentQuests[currentActiveQuest].QuestCompleted.AddListener(OnQuestCompleted);
+
+        questHolder.GetComponent<QuestWindow>().Initialize(CurrentQuests[currentActiveQuest]);
+        
+
+        if(CurrentQuests.Count == currentActiveQuest -1)
+        {
+            print("All quests are done");
+            //TODO : Add end-game
+        }
+
     }
 
     public void Slay(string killedEnemie)
     {
         EventManager.Instance.QueueEvent(new KillGameEvent(killedEnemie));
         print("Slayed");
-        questHolder.GetComponent<QuestWindow>().UpdateIndicators(CurrentQuests[currentActiveQuest]);
     }
 
     public void Fetched(string fetchedItem)
     {
         EventManager.Instance.QueueEvent(new FetchGameEvent(fetchedItem));
         print("Fetched!");
-        questHolder.GetComponent<QuestWindow>().UpdateIndicators(CurrentQuests[currentActiveQuest]);
     }
     public void Talked(string personTalkedTo)
     {
         EventManager.Instance.QueueEvent(new TalkGameEvent(personTalkedTo));
         print("Talked!");
-        questHolder.GetComponent<QuestWindow>().UpdateIndicators(CurrentQuests[currentActiveQuest]);
     }
 
     public void Brought(string itemBrought, string location)
     {
         EventManager.Instance.QueueEvent(new BringGameEvent(itemBrought, location));
         print("Brought!");
-        questHolder.GetComponent<QuestWindow>().UpdateIndicators(CurrentQuests[currentActiveQuest]);
     }
 }
