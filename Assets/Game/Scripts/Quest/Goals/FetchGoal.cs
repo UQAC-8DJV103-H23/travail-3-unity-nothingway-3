@@ -8,7 +8,7 @@ public class FetchGoal : Quest.QuestGoal
 
     public override string GetDescription()
     {
-        return $"Go fetch {FetchedItem}";
+        return $"Go fetch the {FetchedItem}";
     }
 
     public override void Initialize()

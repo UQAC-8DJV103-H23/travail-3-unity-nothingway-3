@@ -9,7 +9,7 @@ public class BringGoal : Quest.QuestGoal
 
     public override string GetDescription()
     {
-        return $"Bring {BroughtItem} to {Location}";
+        return $"Bring the {BroughtItem} to the {Location}";
     }
 
     public override void Initialize()

@@ -13,6 +13,7 @@ public class ThridPersonShooterController : MonoBehaviour
     [SerializeField] private Canvas TutorialCanvas;
     [SerializeField] private Canvas QuestCanvas;
     [SerializeField] private Transform QuestAccepted;
+    [SerializeField] private AudioClip ShootSound;
     public Animator animator;
 
     private StarterAssetsInputs starterAssetsInputs;
@@ -63,6 +64,9 @@ public class ThridPersonShooterController : MonoBehaviour
             Vector3 aimDir = (mouseWorldPosition - spawnProjectilePosition.position).normalized;
             Instantiate(projectile, spawnProjectilePosition.position, Quaternion.LookRotation(aimDir, Vector3.up));
             starterAssetsInputs.shoot = false;
+
+            AudioSource.PlayClipAtPoint(ShootSound, new Vector3(0, 0, 0));
+
         }
 
 

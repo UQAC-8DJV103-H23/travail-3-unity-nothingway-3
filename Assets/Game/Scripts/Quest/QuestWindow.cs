@@ -12,6 +12,7 @@ public class QuestWindow : MonoBehaviour
     [SerializeField] private Transform goalsContent;
     [SerializeField] private Text xpText;
     [SerializeField] private Text goldText;
+    [SerializeField] private AudioClip newQuestSound;
 
     private List<GameObject> goalsIndicators = new List<GameObject>();
 
@@ -44,6 +45,8 @@ public class QuestWindow : MonoBehaviour
 
         xpText.text = quest.reward.XP.ToString() + " XP";
         goldText.text = quest.reward.Currency.ToString() + " Gold";
+
+        AudioSource.PlayClipAtPoint(newQuestSound, new Vector3(0, 0, 0));
 
         StartCoroutine(StartCountdown());
     }

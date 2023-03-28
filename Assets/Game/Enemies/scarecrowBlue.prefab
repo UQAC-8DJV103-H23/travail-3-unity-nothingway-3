@@ -111,6 +111,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efeb2142837faf47ab5b2991f4cd537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wall: {fileID: 0}
+  destroySound: {fileID: 8300000, guid: 0c2d21f6c4a283e4aad25e4a3d4ed373, type: 3}
 --- !u!1 &5747925373151035586
 GameObject:
   m_ObjectHideFlags: 0

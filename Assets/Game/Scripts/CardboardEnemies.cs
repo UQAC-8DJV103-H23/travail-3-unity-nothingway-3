@@ -7,6 +7,9 @@ public class CardboardEnemies : MonoBehaviour
     private QuestManager questManager;
     public Wall wall;
 
+    [SerializeField] private AudioClip destroySound;
+
+
     private void Awake()
     {
         questManager = GameObject.FindGameObjectsWithTag("QuestManager")[0].GetComponent<QuestManager>();
@@ -20,6 +23,8 @@ public class CardboardEnemies : MonoBehaviour
             questManager.Slay("Scarecrow");
 
             wall.ReduceScarecrowsToKill();
+
+            AudioSource.PlayClipAtPoint(destroySound, gameObject.transform.position);
 
             Destroy(gameObject);
 
