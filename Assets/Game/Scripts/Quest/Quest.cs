@@ -46,14 +46,14 @@ public class Quest : ScriptableObject
 
         public virtual void Initialize()
         {
-            Completed= false;
+            Completed = false;
             GoalCompleted = new UnityEvent();
-            CurrentAmount=0;
+            CurrentAmount = 0;
         }
 
         protected void Evaluate()
         {
-            if(CurrentAmount >= RequiredAmount)
+            if (CurrentAmount >= RequiredAmount)
             {
                 Complete();
             }
@@ -61,7 +61,7 @@ public class Quest : ScriptableObject
 
         private void Complete()
         {
-            Completed= true;
+            Completed = true;
             GoalCompleted.Invoke();
             GoalCompleted.RemoveAllListeners();
 
@@ -82,7 +82,7 @@ public class Quest : ScriptableObject
         Completed = false;
         QuestCompleted = new QuestCompleteEvent();
 
-        foreach(QuestGoal goal in Goals)
+        foreach (QuestGoal goal in Goals)
         {
             goal.Initialize();
             goal.GoalCompleted.AddListener(delegate { CheckGoals(); });
@@ -92,7 +92,7 @@ public class Quest : ScriptableObject
     private void CheckGoals()
     {
         Completed = Goals.All(g => g.Completed);
-        if(Completed)
+        if (Completed)
         {
             //Give reward
             QuestCompleted.Invoke(this);
@@ -145,7 +145,7 @@ public class QuestEditior : Editor
         child.NextVisible(true);
 
         EditorGUILayout.LabelField("Quest Info", EditorStyles.boldLabel);
-        while(child.depth > depth) 
+        while (child.depth > depth)
         {
             EditorGUILayout.PropertyField(child, true);
             child.NextVisible(false);
@@ -177,7 +177,7 @@ public class QuestEditior : Editor
 
         Editor ed = null;
         int toDelete = -1;
-        for(int i = 0; i < m_QuestGoalListProperty.arraySize; i++)
+        for (int i = 0; i < m_QuestGoalListProperty.arraySize; i++)
         {
             EditorGUILayout.BeginHorizontal();
             EditorGUILayout.BeginVertical();
@@ -189,14 +189,14 @@ public class QuestEditior : Editor
             ed.OnInspectorGUI();
             EditorGUILayout.EndVertical();
 
-            if(GUILayout.Button("-", GUILayout.Width(32)))
+            if (GUILayout.Button("-", GUILayout.Width(32)))
             {
-                toDelete= i;
+                toDelete = i;
             }
             EditorGUILayout.EndHorizontal();
         }
 
-        if(toDelete != -1)
+        if (toDelete != -1)
         {
             var item = m_QuestGoalListProperty.GetArrayElementAtIndex(toDelete).objectReferenceValue;
             DestroyImmediate(item, true);

@@ -6,16 +6,16 @@ public class SpellLaunch : MonoBehaviour
 
     public float shootForce, upwardForce;
 
-    public float shootSpeed;    
+    public float shootSpeed;
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void shoot()
     {
-        
+
     }
 }

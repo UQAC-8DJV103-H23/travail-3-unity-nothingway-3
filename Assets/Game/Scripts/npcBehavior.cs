@@ -9,7 +9,7 @@ public class npcBehavior : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        if(other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
             gameObject.GetComponent<DialogueTrigger>().TriggerDialogue();
         }

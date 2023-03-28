@@ -24,7 +24,7 @@ public class ThridPersonShooterController : MonoBehaviour
     private void Awake()
     {
         starterAssetsInputs = GetComponent<StarterAssetsInputs>();
-        thirdPersonController= GetComponent<ThirdPersonController>();
+        thirdPersonController = GetComponent<ThirdPersonController>();
 
         StartCoroutine(StartCountdown());
         StartCoroutine(StartCountdownQuest());
@@ -41,7 +41,7 @@ public class ThridPersonShooterController : MonoBehaviour
         if (Physics.Raycast(ray, out RaycastHit raycastHit, 999f, aimColliderLayerMask))
         {
             mouseWorldPosition = raycastHit.point;
-            
+
         }
 
         if (starterAssetsInputs.aim)
@@ -61,7 +61,7 @@ public class ThridPersonShooterController : MonoBehaviour
             thirdPersonController.SetRotateOnMove(true);
         }
 
-        if(starterAssetsInputs.shoot)
+        if (starterAssetsInputs.shoot)
         {
             animator.SetTrigger("Attack");
             Vector3 aimDir = (mouseWorldPosition - spawnProjectilePosition.position).normalized;

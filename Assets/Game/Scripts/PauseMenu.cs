@@ -7,7 +7,7 @@ public class PauseMenu : MonoBehaviour
     public void resume()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        Time.timeScale= 1;
+        Time.timeScale = 1;
         gameObject.SetActive(false);
 
         print("RESUMING");

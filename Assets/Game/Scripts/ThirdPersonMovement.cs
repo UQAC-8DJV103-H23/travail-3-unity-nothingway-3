@@ -7,7 +7,7 @@ public class ThirdPersonMovement : MonoBehaviour
     public CharacterController controller;
     public Transform cam;
     public Animator animator;
-    
+
     public float walkSpeed = 3.0f;
     public float sprintSpeed = 6.0f;
     public float turnSmoothing = 0.1f;
@@ -42,7 +42,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
             Vector3 moveDir = Quaternion.Euler(0f, targetRotation, 0f) * Vector3.forward;
 
-            if(Input.GetKey(KeyCode.LeftShift))
+            if (Input.GetKey(KeyCode.LeftShift))
             {
                 speed = sprintSpeed;
             }

@@ -15,7 +15,7 @@ public class Wall : MonoBehaviour
 
     private void CheckAmount()
     {
-        if(scarecrowsToKill <= 0)
+        if (scarecrowsToKill <= 0)
         {
             Destroy(gameObject);
         }

@@ -26,9 +26,9 @@ public class DialogueManager : MonoBehaviour
     {
         Sentences.Clear();
 
-        foreach (string sentence in dialogue.sentences) 
-        { 
-            
+        foreach (string sentence in dialogue.sentences)
+        {
+
             Sentences.Enqueue(sentence);
 
         }
@@ -40,7 +40,7 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-        if(Sentences.Count == 0)
+        if (Sentences.Count == 0)
         {
             EndDialogue();
             return;
@@ -54,9 +54,9 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
-        if(nameText.text == "Pand-Ah")
+        if (nameText.text == "Pand-Ah")
             questManager.Talked("Panda");
-        
+
         Cursor.lockState = CursorLockMode.Locked;
         dialogueCanvas.SetActive(false);
     }

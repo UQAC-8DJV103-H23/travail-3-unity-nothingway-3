@@ -18,7 +18,7 @@ public class CardboardEnemies : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        if(other.CompareTag("Projectile"))
+        if (other.CompareTag("Projectile"))
         {
             questManager.Slay("Scarecrow");
 

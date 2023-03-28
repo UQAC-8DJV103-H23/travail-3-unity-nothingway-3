@@ -35,12 +35,13 @@ public class QuestWindow : MonoBehaviour
             goalObj.transform.position += (offset * -loopTimes);
             goalObj.transform.Find("Text").GetComponent<Text>().text = goal.GetDescription();
 
-            if(goal.Completed)
+            if (goal.Completed)
             {
                 goalObj.transform.Find("Done").gameObject.SetActive(true);
-            } else
+            }
+            else
 
-            loopTimes++;
+                loopTimes++;
         }
 
         xpText.text = quest.reward.XP.ToString() + " XP";

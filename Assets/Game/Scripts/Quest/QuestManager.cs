@@ -14,12 +14,12 @@ public class QuestManager : MonoBehaviour
 
     private void Awake()
     {
-        if (CurrentQuests[0] != null) 
+        if (CurrentQuests[0] != null)
         {
             CurrentQuests[0].Initialize();
             CurrentQuests[0].QuestCompleted.AddListener(OnQuestCompleted);
 
-            
+
             questHolder.SetActive(true);
 
         }
