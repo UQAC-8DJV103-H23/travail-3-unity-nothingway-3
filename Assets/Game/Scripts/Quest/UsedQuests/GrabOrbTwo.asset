@@ -15,10 +15,9 @@ MonoBehaviour:
   Information:
     name: Medecine for the dead
     icon: {fileID: 0}
-    description: The barrier is down, go get the magical orb! ... What? did you expected
-      another description? This is the same as last time, you know... erf.... Fine...
-      hum...    Grabeth thyne reward! What? Not what you expected? ... Just grab
-      the orb...
+    description: The barrier is down, go get the magical orb! ... What? Expected
+      another description? This is the same as last time, you know... Just grab the
+      orb...
   reward:
     Currency: 10
     XP: 100
