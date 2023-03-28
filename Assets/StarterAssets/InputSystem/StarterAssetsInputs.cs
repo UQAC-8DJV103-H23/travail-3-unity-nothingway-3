@@ -14,8 +14,9 @@ namespace StarterAssets
 		public bool sprint;
 		public bool aim;
 		public bool shoot;
+        public bool pause;
 
-		[Header("Movement Settings")]
+        [Header("Movement Settings")]
 		public bool analogMovement;
 
 		[Header("Mouse Cursor Settings")]
@@ -55,10 +56,15 @@ namespace StarterAssets
 		{
 			ShootInput(value.isPressed);
 		}
+
+        public void OnPause(InputValue value)
+        {
+            PauseInput(value.isPressed);
+        }
 #endif
 
 
-		public void MoveInput(Vector2 newMoveDirection)
+        public void MoveInput(Vector2 newMoveDirection)
 		{
 			move = newMoveDirection;
 		} 
@@ -85,6 +91,10 @@ namespace StarterAssets
         public void ShootInput(bool newShootState)
         {
             shoot = newShootState;
+        }
+		public void PauseInput(bool newPauseState)
+        {
+            pause = newPauseState;
         }
 
         private void OnApplicationFocus(bool hasFocus)

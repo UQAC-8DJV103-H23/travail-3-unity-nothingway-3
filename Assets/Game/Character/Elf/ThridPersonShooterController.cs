@@ -14,6 +14,9 @@ public class ThridPersonShooterController : MonoBehaviour
     [SerializeField] private Canvas QuestCanvas;
     [SerializeField] private Transform QuestAccepted;
     [SerializeField] private AudioClip ShootSound;
+    [SerializeField] private Canvas pauseMenu;
+
+
     public Animator animator;
 
     private StarterAssetsInputs starterAssetsInputs;
@@ -67,6 +70,14 @@ public class ThridPersonShooterController : MonoBehaviour
 
             AudioSource.PlayClipAtPoint(ShootSound, new Vector3(0, 0, 0));
 
+        }
+
+        if (starterAssetsInputs.pause)
+        {
+            pauseMenu.gameObject.SetActive(true);
+            Time.timeScale = 0.0f;
+            Cursor.lockState = CursorLockMode.None;
+            starterAssetsInputs.pause = false;
         }
 
 

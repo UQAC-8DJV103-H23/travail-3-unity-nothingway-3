@@ -5,6 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class EndMenu : MonoBehaviour
 {
+
+    private void Awake()
+    {
+        Cursor.lockState = CursorLockMode.None;
+    }
+
     public void RestartGame()
     {
         SceneManager.LoadScene(1);
