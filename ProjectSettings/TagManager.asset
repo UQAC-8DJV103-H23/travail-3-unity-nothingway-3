@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - CinemachineTarget
+  - Ground
+  - FxTemporaire
+  - Projectile
+  - QuestManager
   layers:
   - Default
   - TransparentFX
